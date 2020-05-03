@@ -26,10 +26,21 @@
 </head>
  
 <body>
-    <center>UserID:<input type="text" id="userId" placeholder="Enter User Id"></center>
-    <center>Password:<input type="password" id="userPassword" placeholder="Enter your password"></center>
-    <center><button class="button">Login</button></center>
+    <center>userID:<input type="text" id="userID" placeholder="Enter User Id"></center>
+    <center>Password:<input type="password" id="Password" placeholder="Enter your password"></center>
+    <center><button onclick="authenticateuser" class="button">Login</button></center>
 </body>
     
 </body>
 </html>
+<script>
+    function authenticateuser(){
+        var userID=document.getElementById("userID").value;
+        var Password=document.getElementById("Password").value;
+        if (userID=="anu" && Password=="Login"){
+            window.location.href="index.html";
+        }else{
+            document.getElementById("message").innerHTML="Login Failure";
+        }
+    }
+</script>
